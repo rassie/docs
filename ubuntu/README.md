@@ -14,6 +14,8 @@ WARNING:
 
 -->
 
+**Note:** this is the "per-architecture" repository for the `ppc64le` builds of [the `ubuntu` official image](https://hub.docker.com/_/ubuntu) -- for more information, see ["Architectures other than amd64?" in the official images documentation](https://github.com/docker-library/official-images#architectures-other-than-amd64) and ["An image's source changed in Git, now what?" in the official images FAQ](https://github.com/docker-library/faq#an-images-source-changed-in-git-now-what).
+
 # Quick reference
 
 -	**Maintained by**:  
@@ -24,12 +26,14 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`18.04`, `bionic-20230530`, `bionic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-bionic-amd64-20230530-638510be&id=638510bec0540d097260e44d99cab6827f32e23c)
--	[`20.04`, `focal-20230412`, `focal`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-focal-amd64-20230412-26258b91&id=26258b9129f269190048fdf2b46d82de5ae5f79c)
--	[`22.04`, `jammy-20230522`, `jammy`, `latest`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-jammy-amd64-20230522-bbd50755&id=bbd50755c7a57a1e30edd0e2a2dcf66aa09cf63c)
--	[`22.10`, `kinetic-20230412`, `kinetic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-kinetic-amd64-20230412-acd9976c&id=acd9976cf1d024747ad42960daa92bc3065e3a38)
--	[`23.04`, `lunar-20230522`, `lunar`, `rolling`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-lunar-amd64-20230522-fd45d9ed&id=fd45d9ed74e848cf70aa35fedea865f9d839bf57)
--	[`23.10`, `mantic-20230520`, `mantic`, `devel`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-mantic-amd64-20230520-e49d32a8&id=e49d32a824c5b21b177d221475d0f6f1bbeae5b2)
+-	[`18.04`, `bionic-20230530`, `bionic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-bionic-ppc64le-20230530-b9ac7a56&id=b9ac7a56b5e0c3b876393fe1a3dfcf3578a9c12c)
+-	[`20.04`, `focal-20230412`, `focal`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-focal-ppc64le-20230412-611cf089&id=611cf089bc430a561c0fec2d55b32a0c01eff0aa)
+-	[`22.04`, `jammy-20230522`, `jammy`, `latest`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-jammy-ppc64le-20230522-85aefda1&id=85aefda11d3969ebc83116f1ebbecfadc4ed0f46)
+-	[`22.10`, `kinetic-20230412`, `kinetic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-kinetic-ppc64le-20230412-017ffd44&id=017ffd4416f0e0394d5ab0dc9fe59e1d388f4f32)
+-	[`23.04`, `lunar-20230522`, `lunar`, `rolling`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-lunar-ppc64le-20230522-f730880d&id=f730880d61f7cd0304f5dba10ed342170f34df16)
+-	[`23.10`, `mantic-20230520`, `mantic`, `devel`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/oci/index.json?h=refs/tags/dist-mantic-ppc64le-20230520-c75118c9&id=c75118c9374130f30bbbb7dc4ea266d21626c441)
+
+[![ppc64le/ubuntu build status badge](https://img.shields.io/jenkins/s/https/doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/ubuntu.svg?label=ppc64le/ubuntu%20%20build%20job)](https://doi-janky.infosiftr.net/job/multiarch/job/ppc64le/job/ubuntu/)
 
 # Quick reference (cont.)
 
@@ -64,9 +68,9 @@ Development of Ubuntu is led by Canonical Ltd. Canonical generates revenue throu
 
 This image is built from official rootfs tarballs provided by Canonical (see `dist-*` tags at https://git.launchpad.net/cloud-images/+oci/ubuntu-base).
 
-The `ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ubuntu:rolling` tag points to the latest release (regardless of LTS status).
+The `ppc64le/ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ppc64le/ubuntu:rolling` tag points to the latest release (regardless of LTS status).
 
-Along a similar vein, the `ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
+Along a similar vein, the `ppc64le/ubuntu:devel` tag is an alias for whichever release the "devel" suite on the mirrors currently points to, as determined by the following one-liner: `wget -qO- http://archive.ubuntu.com/ubuntu/dists/devel/Release | awk -F ': ' '$1 == "Codename" { print $2; exit }'`
 
 ## Locales
 
